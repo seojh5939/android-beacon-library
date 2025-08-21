@@ -1,14 +1,19 @@
+//plugins {
+//    id 'com.android.library'
+//    id("org.jetbrains.dokka") version "1.5.0"
+//}
+//apply plugin: 'kotlin-android'
 plugins {
     id 'com.android.library'
     id("org.jetbrains.dokka") version "1.5.0"
+    id 'kotlin-android'
 }
-apply plugin: 'kotlin-android'
 
 android.buildFeatures.buildConfig true
 
 android {
-    compileSdkVersion 34
-    buildToolsVersion "34.0.0"
+    compileSdkVersion 35
+    buildToolsVersion "36.0.0"
 
     kotlinOptions {
         jvmTarget = "17"
@@ -16,7 +21,7 @@ android {
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 34
+        targetSdkVersion 35
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
         // The hack below is because VERSION_NAME has been removed from BuildConfig as of Gradle Plugin 4.1
